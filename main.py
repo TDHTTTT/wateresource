@@ -1,5 +1,5 @@
 import math
-import urllib
+import urllib.request
 
 URL = "http://rapid-hub.org/data/angles_UCI_CS.csv"
 FILENAME = "angles_UCI_CS.csv"

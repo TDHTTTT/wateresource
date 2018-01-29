@@ -9,6 +9,7 @@ def get_data():
     content = response.read()
     newfile = open(FILENAME,"w")
     newfile.write(content.decode('utf-8'))
+    newfile.flush()
     newfile.close()
     
 def open_file(filename):

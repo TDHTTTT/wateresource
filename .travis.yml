@@ -4,4 +4,6 @@ python:
   - 3.5
   - 3.6
 
-script: python main.py
+script: 
+  - ./tst_dwnl.sh
+  - ./tst_repr.sh

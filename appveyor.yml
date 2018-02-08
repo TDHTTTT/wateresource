@@ -1,5 +1,4 @@
-mode:
-  -script
+mode: Script
   
 test_script:
   - ls

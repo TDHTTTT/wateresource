@@ -1,4 +1,9 @@
+language: generic
 
+before_install:
+  - chmod +x tst/tst_dwnl.sh
+  - chmod +x tst/repr_dwnl.sh
+  
 script: 
   - cd tst
   - ./tst_dwnl.sh

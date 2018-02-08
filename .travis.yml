@@ -1,4 +1,4 @@
 
 script: 
-  - ./tst_dwnl.sh
-  - ./tst_repr.sh
+  - tst_dwnl.sh
+  - tst_repr.sh

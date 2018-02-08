@@ -1,6 +1,5 @@
 
 script: 
-  - pwd
-  - ls
+  - cd tst
   - tst_dwnl.sh
   - tst_repr.sh

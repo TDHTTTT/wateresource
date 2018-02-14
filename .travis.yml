@@ -1,12 +1,13 @@
 language: generic
 
+
 matrix:
     incude:
-        -os: linux
-         sudo: required
-        -os: osx
+        - os: linux
+          sudo: required
+        - os: osx
     allow_failures:
-        -os: osx
+        - os: osx
   
 script: 
   - cd tst

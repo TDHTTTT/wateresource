@@ -1,5 +1,8 @@
+build: off
+
 platform:
   - x64
+
 test_script: 
   - cmd: cd tst
   - cmd: chmod +x tst_dwnl.sh

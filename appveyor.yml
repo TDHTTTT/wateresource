@@ -7,4 +7,4 @@ test_script:
   - cmd: cd tst
   - cmd: chmod +x tst_dwnl.sh
   - cmd: chmod +x tst_repr.sh
-  - sh tst_dwnl.sh
+  - sh: tst_dwnl.sh

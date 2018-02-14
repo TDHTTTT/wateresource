@@ -11,7 +11,7 @@ matrix:
   
 script: 
   - cd tst
-    #- chmod +x tst_dwnl.sh
-    #- chmod +x tst_repr.sh
+  - chmod +x tst_dwnl.sh
+  - chmod +x tst_repr.sh
   - ./tst_dwnl.sh
   - ./tst_repr.sh

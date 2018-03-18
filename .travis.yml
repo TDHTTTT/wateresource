@@ -10,7 +10,8 @@ matrix:
         - os: osx
   
 script:
-  - echo $TRAVIS_OS_NAME 
+  - echo $TRAVIS_OS_NAME
+  - echo $TRAVIS_BUILD_DIR
   - cd tst
   - chmod +x tst_dwnl.sh
   - chmod +x tst_repr.sh

@@ -9,7 +9,8 @@ matrix:
     allow_failures:
         - os: osx
   
-script: 
+script:
+  - echo $TRAVIS_OS_NAME 
   - cd tst
   - chmod +x tst_dwnl.sh
   - chmod +x tst_repr.sh

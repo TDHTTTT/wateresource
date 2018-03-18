@@ -1,6 +1,5 @@
 language: generic
 
-
 matrix:
     incude:
         - os: linux
@@ -8,10 +7,16 @@ matrix:
         - os: osx
     allow_failures:
         - os: osx
-  
+
+- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then echo "I am doing LINUX!"; fi
+- if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then echo "I am doing osx!"; fi
+
+- uname -a
+- echo $TRAVIS_OS_NAME
+- pwd
+- echo $TRAVIS_BUILD_DIR
+
 script:
-  - echo $TRAVIS_OS_NAME
-  - echo $TRAVIS_BUILD_DIR
   - cd tst
   - chmod +x tst_dwnl.sh
   - chmod +x tst_repr.sh

@@ -1,12 +1,15 @@
 language: generic
 
 matrix:
-    incude:
-        - os: linux
-          sudo: required
-        - os: osx
-    allow_failures:
-        - os: osx
+  incude:
+    - os: linux
+      sudo: required
+    - os: osx
+  allow_failures:
+    - os: osx
+
+env:
+- TST_DWNL = './tst_dwnl.sh' TST_REPR = './tst_repr.sh'
 
 before_install:
 - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then echo "I am doing LINUX!"; fi

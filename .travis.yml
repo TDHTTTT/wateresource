@@ -2,10 +2,10 @@ language: python
 
 matrix:
   incude:
-    - os: linux
-      sudo: required
-      env: TOXENV=py32
-      python: 3.2
+      #    - os: linux
+      #sudo: required
+      #env: TOXENV=py32
+      #python: 3.2
 
     - os: osx
       language: generic

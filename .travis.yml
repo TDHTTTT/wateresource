@@ -2,17 +2,17 @@ language: python
 
 matrix:
   incude:
-      #    - os: linux
-      #sudo: required
-      #env: TOXENV=py32
-      #python: 3.2
+      - os: linux
+      sudo: required
+      env: TOXENV=py32
+      python: 3.2
 
     - os: osx
       language: generic
       env: TOXENV=py32
 
-env:
-- TST_DWNL = './tst_dwnl.sh' TST_REPR = './tst_repr.sh'
+      #env:
+      #- TST_DWNL = './tst_dwnl.sh' TST_REPR = './tst_repr.sh'
 
 before_install:
 - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then echo "I am doing LINUX!"; fi

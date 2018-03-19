@@ -8,7 +8,7 @@ matrix:
     allow_failures:
         - os: osx
 
-env:
+before_install:
 - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then echo "I am doing LINUX!"; fi
 - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then echo "I am doing osx!"; fi
 

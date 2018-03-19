@@ -1,12 +1,15 @@
-language: generic
+language: python
 
 matrix:
   incude:
     - os: linux
       sudo: required
+      env: TOXENV=py32
+      python: 3.2
+
     - os: osx
-  allow_failures:
-    - os: osx
+      language: generic
+      env: TOXENV=py32
 
 env:
 - TST_DWNL = './tst_dwnl.sh' TST_REPR = './tst_repr.sh'
@@ -23,8 +26,8 @@ before_install:
 - echo "Hello"
 
 script:
-  - cd tst
-  - chmod +x tst_dwnl.sh
-  - chmod +x tst_repr.sh
-  - ./tst_dwnl.sh
-  - ./tst_repr.sh
+- cd tst
+- chmod +x tst_dwnl.sh
+- chmod +x tst_repr.sh
+- ./tst_dwnl.sh
+- ./tst_repr.sh

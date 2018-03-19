@@ -15,6 +15,7 @@ matrix:
 - echo $TRAVIS_OS_NAME
 - pwd
 - echo $TRAVIS_BUILD_DIR
+- echo "Hello"
 
 script:
   - cd tst

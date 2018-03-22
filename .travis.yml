@@ -27,13 +27,14 @@ before_install:
 - python --version
 
 install:
-- pwd
 - cd tst
+- pwd
 - cd ..
+- pwd
   
 script:
-- pwd
 - cd tst
+- pwd
 - chmod +x tst_dwnl.sh
 - chmod +x tst_repr.sh
 - echo $TST_DWNL && $TST_DWNL

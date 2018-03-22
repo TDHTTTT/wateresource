@@ -1,10 +1,5 @@
 language: generic
 
-#os:
-#  - linux
-#  - osx
-#    
-
 matrix:
   include:
     - os: linux
@@ -16,27 +11,30 @@ matrix:
       language: generic
       env: TOXENV=py32
 
-      #env:
-      #- TST_DWNL = './tst_dwnl.sh' TST_REPR = './tst_repr.sh'
+env:
+- TST_DWNL = './tst_dwnl.sh' TST_REPR = './tst_repr.sh'
 
 before_install:
+- pwd
 - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then echo "I am doing LINUX!"; fi
 - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then echo "I am doing osx!"; fi
 
 - echo "TTT"
 - uname -a
 - echo $TRAVIS_OS_NAME
-- pwd
 - echo $TRAVIS_BUILD_DIR
+- python3 --version
 - python --version
 
 install:
+- pwd
 - cd tst
 - cd ..
   
 script:
+- pwd
 - cd tst
 - chmod +x tst_dwnl.sh
 - chmod +x tst_repr.sh
-- ./tst_dwnl.sh
-- ./tst_repr.sh
+- echo $TST_DWNL && $TST_DWNL
+- echo $TST_REPR && $TST_REPR

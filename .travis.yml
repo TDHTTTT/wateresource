@@ -1,21 +1,28 @@
-language: generic
+language: python
 
 matrix:
   include:
     - os: linux
       sudo: required
-      env: TOXENV=py32
       python: 3.2
+      env: TOXENV=py32
+
+    - os: linux
+      sudo: required
+      python: 3.3
+      env: TOXENV=py33
 
     - os: osx
       language: generic
       env: TOXENV=py32
 
+    - os: osx
+      env: TOXENV=py33
+
 env:
 - TST_DWNL = './tst_dwnl.sh' TST_REPR = './tst_repr.sh'
 
 before_install:
-- pwd
 - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then echo "I am doing LINUX!"; fi
 - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then echo "I am doing osx!"; fi
 
@@ -27,15 +34,8 @@ before_install:
 - python --version
 
 install:
-- cd tst
-- pwd
-- cd ..
 - pwd
   
 script:
-- cd tst
-- pwd
-- chmod +x tst_dwnl.sh
-- chmod +x tst_repr.sh
 - echo $TST_DWNL && $TST_DWNL
 - echo $TST_REPR && $TST_REPR

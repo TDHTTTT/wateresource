@@ -6,7 +6,7 @@ language: generic
 #    
 
 matrix:
-  incude:
+  include:
     - os: linux
       sudo: required
       env: TOXENV=py32

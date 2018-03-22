@@ -25,6 +25,10 @@ before_install:
 - echo $TRAVIS_BUILD_DIR
 - echo "Hello"
 
+install:
+- cd tst
+- cd ..
+  
 script:
 - cd tst
 - chmod +x tst_dwnl.sh
